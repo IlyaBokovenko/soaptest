@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09309BA40F7B9267008A61C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		09309BA50F7B9267008A61C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		09309BA60F7B9267008A61C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		09309BAD0F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BA90F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.m */; };
+		09309BAE0F7B92A3008A61C5 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BAA0F7B92A3008A61C5 /* GTMIPhoneUnitTestMain.m */; };
+		09309BAF0F7B92A3008A61C5 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BAC0F7B92A3008A61C5 /* GTMSenTestCase.m */; };
+		09309C2C0F7B934B008A61C5 /* AsyncObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BC30F7B934B008A61C5 /* AsyncObject.m */; };
+		09309C2D0F7B934B008A61C5 /* UIBlockingAsyncObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BC50F7B934B008A61C5 /* UIBlockingAsyncObject.m */; };
+		09309C330F7B934B008A61C5 /* CGGeometry+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BD30F7B934B008A61C5 /* CGGeometry+Utils.m */; };
+		09309C340F7B934B008A61C5 /* CollectionWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BD50F7B934B008A61C5 /* CollectionWindow.m */; };
+		09309C390F7B934B008A61C5 /* AgreementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BE20F7B934B008A61C5 /* AgreementCell.m */; };
+		09309C3A0F7B934B008A61C5 /* AgreementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BE40F7B934B008A61C5 /* AgreementController.m */; };
+		09309C3B0F7B934B008A61C5 /* DateTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BE60F7B934B008A61C5 /* DateTimeCell.m */; };
+		09309C3C0F7B934B008A61C5 /* FormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BE80F7B934B008A61C5 /* FormCell.m */; };
+		09309C3D0F7B934B008A61C5 /* FormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BEA0F7B934B008A61C5 /* FormController.m */; };
+		09309C3E0F7B934B008A61C5 /* FormFieldDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BEC0F7B934B008A61C5 /* FormFieldDescriptor.m */; };
+		09309C3F0F7B934B008A61C5 /* FormTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BEE0F7B934B008A61C5 /* FormTableController.m */; };
+		09309C400F7B934B008A61C5 /* ForwardingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BF00F7B934B008A61C5 /* ForwardingLabel.m */; };
+		09309C410F7B934B008A61C5 /* SelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BF20F7B934B008A61C5 /* SelectionController.m */; };
+		09309C420F7B934B008A61C5 /* StaticFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BF40F7B934B008A61C5 /* StaticFormCell.m */; };
+		09309C430F7B934B008A61C5 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BF60F7B934B008A61C5 /* SwitchCell.m */; };
+		09309C440F7B934B008A61C5 /* TextEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BF80F7B934B008A61C5 /* TextEditController.m */; };
+		09309C450F7B934B008A61C5 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BFA0F7B934B008A61C5 /* TextFieldCell.m */; };
+		09309C460F7B934B008A61C5 /* TitledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BFC0F7B934B008A61C5 /* TitledCell.m */; };
+		09309C470F7B934B008A61C5 /* POXMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C000F7B934B008A61C5 /* POXMapping.m */; };
+		09309C480F7B934B008A61C5 /* POXMappingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C020F7B934B008A61C5 /* POXMappingUtil.m */; };
+		09309C490F7B934B008A61C5 /* SelfDescribing.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C040F7B934B008A61C5 /* SelfDescribing.m */; };
+		09309C4A0F7B934B008A61C5 /* NSArray+Graphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C060F7B934B008A61C5 /* NSArray+Graphics.m */; };
+		09309C4B0F7B934B008A61C5 /* NSArray+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C080F7B934B008A61C5 /* NSArray+Utils.m */; };
+		09309C4C0F7B934B008A61C5 /* NSBundle+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C0A0F7B934B008A61C5 /* NSBundle+Utils.m */; };
+		09309C4D0F7B934B008A61C5 /* NSData+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C0C0F7B934B008A61C5 /* NSData+Utils.m */; };
+		09309C4E0F7B934B008A61C5 /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C0E0F7B934B008A61C5 /* NSDate+Utils.m */; };
+		09309C4F0F7B934B008A61C5 /* NSError+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C100F7B934B008A61C5 /* NSError+Utils.m */; };
+		09309C500F7B934B008A61C5 /* NSMutableArray+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C120F7B934B008A61C5 /* NSMutableArray+Utils.m */; };
+		09309C510F7B934B008A61C5 /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C140F7B934B008A61C5 /* NSObject+Utils.m */; };
+		09309C520F7B934B008A61C5 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C160F7B934B008A61C5 /* NSString+Utils.m */; };
+		09309C530F7B934B008A61C5 /* NSUserDefaults+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C180F7B934B008A61C5 /* NSUserDefaults+Utils.m */; };
+		09309C550F7B934B008A61C5 /* SoapArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C1D0F7B934B008A61C5 /* SoapArchiver.m */; };
+		09309C560F7B934B008A61C5 /* UIApplication+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C1F0F7B934B008A61C5 /* UIApplication+Utils.m */; };
+		09309C570F7B934B008A61C5 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C210F7B934B008A61C5 /* UIView+Utils.m */; };
+		09309C580F7B934B008A61C5 /* UIWebView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C230F7B934B008A61C5 /* UIWebView+Utils.m */; };
+		09309C590F7B934B008A61C5 /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C260F7B934B008A61C5 /* CustomTableCell.m */; };
+		09309C5A0F7B934B008A61C5 /* RESTService.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C290F7B934B008A61C5 /* RESTService.m */; };
+		09309C5B0F7B934B008A61C5 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C2B0F7B934B008A61C5 /* XMLWriter.m */; };
+		09309C5F0F7B938D008A61C5 /* SoapArchiverTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C5E0F7B938D008A61C5 /* SoapArchiverTest.m */; };
+		09309C630F7B944F008A61C5 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C620F7B944F008A61C5 /* TestObject.m */; };
+		09309D490F7BBD60008A61C5 /* TestHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309D480F7BBD60008A61C5 /* TestHeader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09309B990F7B924A008A61C5 /* SoapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SoapTest.app; path = "build/Debug-iphonesimulator/SoapTest.app"; sourceTree = "<group>"; };
+		09309B9B0F7B924A008A61C5 /* SoapTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoapTest-Info.plist"; sourceTree = "<group>"; };
+		09309BA80F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMIPhoneUnitTestDelegate.h; path = "../google-toolbox-for-mac-1-5-1/UnitTesting/GTMIPhoneUnitTestDelegate.h"; sourceTree = SOURCE_ROOT; };
+		09309BA90F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestDelegate.m; path = "../google-toolbox-for-mac-1-5-1/UnitTesting/GTMIPhoneUnitTestDelegate.m"; sourceTree = SOURCE_ROOT; };
+		09309BAA0F7B92A3008A61C5 /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestMain.m; path = "../google-toolbox-for-mac-1-5-1/UnitTesting/GTMIPhoneUnitTestMain.m"; sourceTree = SOURCE_ROOT; };
+		09309BAB0F7B92A3008A61C5 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "../google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.h"; sourceTree = SOURCE_ROOT; };
+		09309BAC0F7B92A3008A61C5 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "../google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.m"; sourceTree = SOURCE_ROOT; };
+		09309BB00F7B92D2008A61C5 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "../google-toolbox-for-mac-1-5-1/GTMDefines.h"; sourceTree = SOURCE_ROOT; };
+		09309BC20F7B934B008A61C5 /* AsyncObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncObject.h; sourceTree = "<group>"; };
+		09309BC30F7B934B008A61C5 /* AsyncObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncObject.m; sourceTree = "<group>"; };
+		09309BC40F7B934B008A61C5 /* UIBlockingAsyncObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBlockingAsyncObject.h; sourceTree = "<group>"; };
+		09309BC50F7B934B008A61C5 /* UIBlockingAsyncObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBlockingAsyncObject.m; sourceTree = "<group>"; };
+		09309BC60F7B934B008A61C5 /* UIBlockingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBlockingView.h; sourceTree = "<group>"; };
+		09309BD20F7B934B008A61C5 /* CGGeometry+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+Utils.h"; sourceTree = "<group>"; };
+		09309BD30F7B934B008A61C5 /* CGGeometry+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+Utils.m"; sourceTree = "<group>"; };
+		09309BD40F7B934B008A61C5 /* CollectionWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionWindow.h; sourceTree = "<group>"; };
+		09309BD50F7B934B008A61C5 /* CollectionWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionWindow.m; sourceTree = "<group>"; };
+		09309BD60F7B934B008A61C5 /* CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
+		09309BE10F7B934B008A61C5 /* AgreementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementCell.h; sourceTree = "<group>"; };
+		09309BE20F7B934B008A61C5 /* AgreementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementCell.m; sourceTree = "<group>"; };
+		09309BE30F7B934B008A61C5 /* AgreementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementController.h; sourceTree = "<group>"; };
+		09309BE40F7B934B008A61C5 /* AgreementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementController.m; sourceTree = "<group>"; };
+		09309BE50F7B934B008A61C5 /* DateTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTimeCell.h; sourceTree = "<group>"; };
+		09309BE60F7B934B008A61C5 /* DateTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTimeCell.m; sourceTree = "<group>"; };
+		09309BE70F7B934B008A61C5 /* FormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormCell.h; sourceTree = "<group>"; };
+		09309BE80F7B934B008A61C5 /* FormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormCell.m; sourceTree = "<group>"; };
+		09309BE90F7B934B008A61C5 /* FormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormController.h; sourceTree = "<group>"; };
+		09309BEA0F7B934B008A61C5 /* FormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormController.m; sourceTree = "<group>"; };
+		09309BEB0F7B934B008A61C5 /* FormFieldDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormFieldDescriptor.h; sourceTree = "<group>"; };
+		09309BEC0F7B934B008A61C5 /* FormFieldDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormFieldDescriptor.m; sourceTree = "<group>"; };
+		09309BED0F7B934B008A61C5 /* FormTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTableController.h; sourceTree = "<group>"; };
+		09309BEE0F7B934B008A61C5 /* FormTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTableController.m; sourceTree = "<group>"; };
+		09309BEF0F7B934B008A61C5 /* ForwardingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardingLabel.h; sourceTree = "<group>"; };
+		09309BF00F7B934B008A61C5 /* ForwardingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardingLabel.m; sourceTree = "<group>"; };
+		09309BF10F7B934B008A61C5 /* SelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionController.h; sourceTree = "<group>"; };
+		09309BF20F7B934B008A61C5 /* SelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionController.m; sourceTree = "<group>"; };
+		09309BF30F7B934B008A61C5 /* StaticFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticFormCell.h; sourceTree = "<group>"; };
+		09309BF40F7B934B008A61C5 /* StaticFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticFormCell.m; sourceTree = "<group>"; };
+		09309BF50F7B934B008A61C5 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
+		09309BF60F7B934B008A61C5 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
+		09309BF70F7B934B008A61C5 /* TextEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditController.h; sourceTree = "<group>"; };
+		09309BF80F7B934B008A61C5 /* TextEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditController.m; sourceTree = "<group>"; };
+		09309BF90F7B934B008A61C5 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
+		09309BFA0F7B934B008A61C5 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
+		09309BFB0F7B934B008A61C5 /* TitledCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitledCell.h; sourceTree = "<group>"; };
+		09309BFC0F7B934B008A61C5 /* TitledCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitledCell.m; sourceTree = "<group>"; };
+		09309BFE0F7B934B008A61C5 /* ClassMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMetadata.h; sourceTree = "<group>"; };
+		09309BFF0F7B934B008A61C5 /* POXMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POXMapping.h; sourceTree = "<group>"; };
+		09309C000F7B934B008A61C5 /* POXMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POXMapping.m; sourceTree = "<group>"; };
+		09309C010F7B934B008A61C5 /* POXMappingUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POXMappingUtil.h; sourceTree = "<group>"; };
+		09309C020F7B934B008A61C5 /* POXMappingUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POXMappingUtil.m; sourceTree = "<group>"; };
+		09309C030F7B934B008A61C5 /* SelfDescribing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfDescribing.h; sourceTree = "<group>"; };
+		09309C040F7B934B008A61C5 /* SelfDescribing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfDescribing.m; sourceTree = "<group>"; };
+		09309C050F7B934B008A61C5 /* NSArray+Graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Graphics.h"; sourceTree = "<group>"; };
+		09309C060F7B934B008A61C5 /* NSArray+Graphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Graphics.m"; sourceTree = "<group>"; };
+		09309C070F7B934B008A61C5 /* NSArray+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Utils.h"; sourceTree = "<group>"; };
+		09309C080F7B934B008A61C5 /* NSArray+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Utils.m"; sourceTree = "<group>"; };
+		09309C090F7B934B008A61C5 /* NSBundle+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Utils.h"; sourceTree = "<group>"; };
+		09309C0A0F7B934B008A61C5 /* NSBundle+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Utils.m"; sourceTree = "<group>"; };
+		09309C0B0F7B934B008A61C5 /* NSData+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Utils.h"; sourceTree = "<group>"; };
+		09309C0C0F7B934B008A61C5 /* NSData+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Utils.m"; sourceTree = "<group>"; };
+		09309C0D0F7B934B008A61C5 /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
+		09309C0E0F7B934B008A61C5 /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
+		09309C0F0F7B934B008A61C5 /* NSError+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Utils.h"; sourceTree = "<group>"; };
+		09309C100F7B934B008A61C5 /* NSError+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Utils.m"; sourceTree = "<group>"; };
+		09309C110F7B934B008A61C5 /* NSMutableArray+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Utils.h"; sourceTree = "<group>"; };
+		09309C120F7B934B008A61C5 /* NSMutableArray+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Utils.m"; sourceTree = "<group>"; };
+		09309C130F7B934B008A61C5 /* NSObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Utils.h"; sourceTree = "<group>"; };
+		09309C140F7B934B008A61C5 /* NSObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Utils.m"; sourceTree = "<group>"; };
+		09309C150F7B934B008A61C5 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		09309C160F7B934B008A61C5 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		09309C170F7B934B008A61C5 /* NSUserDefaults+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Utils.h"; sourceTree = "<group>"; };
+		09309C180F7B934B008A61C5 /* NSUserDefaults+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Utils.m"; sourceTree = "<group>"; };
+		09309C1C0F7B934B008A61C5 /* SoapArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapArchiver.h; sourceTree = "<group>"; };
+		09309C1D0F7B934B008A61C5 /* SoapArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapArchiver.m; sourceTree = "<group>"; };
+		09309C1E0F7B934B008A61C5 /* UIApplication+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Utils.h"; sourceTree = "<group>"; };
+		09309C1F0F7B934B008A61C5 /* UIApplication+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Utils.m"; sourceTree = "<group>"; };
+		09309C200F7B934B008A61C5 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		09309C210F7B934B008A61C5 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		09309C220F7B934B008A61C5 /* UIWebView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Utils.h"; sourceTree = "<group>"; };
+		09309C230F7B934B008A61C5 /* UIWebView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Utils.m"; sourceTree = "<group>"; };
+		09309C250F7B934B008A61C5 /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
+		09309C260F7B934B008A61C5 /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
+		09309C280F7B934B008A61C5 /* RESTService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTService.h; sourceTree = "<group>"; };
+		09309C290F7B934B008A61C5 /* RESTService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTService.m; sourceTree = "<group>"; };
+		09309C2A0F7B934B008A61C5 /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
+		09309C2B0F7B934B008A61C5 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
+		09309C5E0F7B938D008A61C5 /* SoapArchiverTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapArchiverTest.m; sourceTree = "<group>"; };
+		09309C610F7B944F008A61C5 /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
+		09309C620F7B944F008A61C5 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		09309D3F0F7BB969008A61C5 /* SoapEntityProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoapEntityProto.h; path = "../ecma-utils/Classes/Soap/SoapEntityProto.h"; sourceTree = SOURCE_ROOT; };
+		09309D470F7BBD60008A61C5 /* TestHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHeader.h; sourceTree = "<group>"; };
+		09309D480F7BBD60008A61C5 /* TestHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHeader.m; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09309B970F7B924A008A61C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09309BA40F7B9267008A61C5 /* UIKit.framework in Frameworks */,
+				09309BA50F7B9267008A61C5 /* Foundation.framework in Frameworks */,
+				09309BA60F7B9267008A61C5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09309BA70F7B9284008A61C5 /* TestUnit */ = {
+			isa = PBXGroup;
+			children = (
+				09309BB00F7B92D2008A61C5 /* GTMDefines.h */,
+				09309BA80F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.h */,
+				09309BA90F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.m */,
+				09309BAA0F7B92A3008A61C5 /* GTMIPhoneUnitTestMain.m */,
+				09309BAB0F7B92A3008A61C5 /* GTMSenTestCase.h */,
+				09309BAC0F7B92A3008A61C5 /* GTMSenTestCase.m */,
+			);
+			name = TestUnit;
+			sourceTree = "<group>";
+		};
+		09309BBD0F7B9304008A61C5 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				09309BC00F7B934B008A61C5 /* libcommon */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		09309BC00F7B934B008A61C5 /* libcommon */ = {
+			isa = PBXGroup;
+			children = (
+				09309BC10F7B934B008A61C5 /* Async */,
+				09309BD20F7B934B008A61C5 /* CGGeometry+Utils.h */,
+				09309BD30F7B934B008A61C5 /* CGGeometry+Utils.m */,
+				09309BD40F7B934B008A61C5 /* CollectionWindow.h */,
+				09309BD50F7B934B008A61C5 /* CollectionWindow.m */,
+				09309BD60F7B934B008A61C5 /* CommonUtils.h */,
+				09309BE00F7B934B008A61C5 /* Forms */,
+				09309BFD0F7B934B008A61C5 /* Mapping */,
+				09309C050F7B934B008A61C5 /* NSArray+Graphics.h */,
+				09309C060F7B934B008A61C5 /* NSArray+Graphics.m */,
+				09309C070F7B934B008A61C5 /* NSArray+Utils.h */,
+				09309C080F7B934B008A61C5 /* NSArray+Utils.m */,
+				09309C090F7B934B008A61C5 /* NSBundle+Utils.h */,
+				09309C0A0F7B934B008A61C5 /* NSBundle+Utils.m */,
+				09309C0B0F7B934B008A61C5 /* NSData+Utils.h */,
+				09309C0C0F7B934B008A61C5 /* NSData+Utils.m */,
+				09309C0D0F7B934B008A61C5 /* NSDate+Utils.h */,
+				09309C0E0F7B934B008A61C5 /* NSDate+Utils.m */,
+				09309C0F0F7B934B008A61C5 /* NSError+Utils.h */,
+				09309C100F7B934B008A61C5 /* NSError+Utils.m */,
+				09309C110F7B934B008A61C5 /* NSMutableArray+Utils.h */,
+				09309C120F7B934B008A61C5 /* NSMutableArray+Utils.m */,
+				09309C130F7B934B008A61C5 /* NSObject+Utils.h */,
+				09309C140F7B934B008A61C5 /* NSObject+Utils.m */,
+				09309C150F7B934B008A61C5 /* NSString+Utils.h */,
+				09309C160F7B934B008A61C5 /* NSString+Utils.m */,
+				09309C170F7B934B008A61C5 /* NSUserDefaults+Utils.h */,
+				09309C180F7B934B008A61C5 /* NSUserDefaults+Utils.m */,
+				09309C1B0F7B934B008A61C5 /* Soap */,
+				09309C1E0F7B934B008A61C5 /* UIApplication+Utils.h */,
+				09309C1F0F7B934B008A61C5 /* UIApplication+Utils.m */,
+				09309C200F7B934B008A61C5 /* UIView+Utils.h */,
+				09309C210F7B934B008A61C5 /* UIView+Utils.m */,
+				09309C220F7B934B008A61C5 /* UIWebView+Utils.h */,
+				09309C230F7B934B008A61C5 /* UIWebView+Utils.m */,
+				09309C240F7B934B008A61C5 /* View */,
+				09309C270F7B934B008A61C5 /* Web */,
+				09309C2A0F7B934B008A61C5 /* XMLWriter.h */,
+				09309C2B0F7B934B008A61C5 /* XMLWriter.m */,
+			);
+			path = libcommon;
+			sourceTree = "<group>";
+		};
+		09309BC10F7B934B008A61C5 /* Async */ = {
+			isa = PBXGroup;
+			children = (
+				09309BC20F7B934B008A61C5 /* AsyncObject.h */,
+				09309BC30F7B934B008A61C5 /* AsyncObject.m */,
+				09309BC40F7B934B008A61C5 /* UIBlockingAsyncObject.h */,
+				09309BC50F7B934B008A61C5 /* UIBlockingAsyncObject.m */,
+				09309BC60F7B934B008A61C5 /* UIBlockingView.h */,
+			);
+			path = Async;
+			sourceTree = "<group>";
+		};
+		09309BE00F7B934B008A61C5 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				09309BE10F7B934B008A61C5 /* AgreementCell.h */,
+				09309BE20F7B934B008A61C5 /* AgreementCell.m */,
+				09309BE30F7B934B008A61C5 /* AgreementController.h */,
+				09309BE40F7B934B008A61C5 /* AgreementController.m */,
+				09309BE50F7B934B008A61C5 /* DateTimeCell.h */,
+				09309BE60F7B934B008A61C5 /* DateTimeCell.m */,
+				09309BE70F7B934B008A61C5 /* FormCell.h */,
+				09309BE80F7B934B008A61C5 /* FormCell.m */,
+				09309BE90F7B934B008A61C5 /* FormController.h */,
+				09309BEA0F7B934B008A61C5 /* FormController.m */,
+				09309BEB0F7B934B008A61C5 /* FormFieldDescriptor.h */,
+				09309BEC0F7B934B008A61C5 /* FormFieldDescriptor.m */,
+				09309BED0F7B934B008A61C5 /* FormTableController.h */,
+				09309BEE0F7B934B008A61C5 /* FormTableController.m */,
+				09309BEF0F7B934B008A61C5 /* ForwardingLabel.h */,
+				09309BF00F7B934B008A61C5 /* ForwardingLabel.m */,
+				09309BF10F7B934B008A61C5 /* SelectionController.h */,
+				09309BF20F7B934B008A61C5 /* SelectionController.m */,
+				09309BF30F7B934B008A61C5 /* StaticFormCell.h */,
+				09309BF40F7B934B008A61C5 /* StaticFormCell.m */,
+				09309BF50F7B934B008A61C5 /* SwitchCell.h */,
+				09309BF60F7B934B008A61C5 /* SwitchCell.m */,
+				09309BF70F7B934B008A61C5 /* TextEditController.h */,
+				09309BF80F7B934B008A61C5 /* TextEditController.m */,
+				09309BF90F7B934B008A61C5 /* TextFieldCell.h */,
+				09309BFA0F7B934B008A61C5 /* TextFieldCell.m */,
+				09309BFB0F7B934B008A61C5 /* TitledCell.h */,
+				09309BFC0F7B934B008A61C5 /* TitledCell.m */,
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
+		09309BFD0F7B934B008A61C5 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				09309BFE0F7B934B008A61C5 /* ClassMetadata.h */,
+				09309BFF0F7B934B008A61C5 /* POXMapping.h */,
+				09309C000F7B934B008A61C5 /* POXMapping.m */,
+				09309C010F7B934B008A61C5 /* POXMappingUtil.h */,
+				09309C020F7B934B008A61C5 /* POXMappingUtil.m */,
+				09309C030F7B934B008A61C5 /* SelfDescribing.h */,
+				09309C040F7B934B008A61C5 /* SelfDescribing.m */,
+			);
+			path = Mapping;
+			sourceTree = "<group>";
+		};
+		09309C1B0F7B934B008A61C5 /* Soap */ = {
+			isa = PBXGroup;
+			children = (
+				09309C1C0F7B934B008A61C5 /* SoapArchiver.h */,
+				09309C1D0F7B934B008A61C5 /* SoapArchiver.m */,
+				09309D3F0F7BB969008A61C5 /* SoapEntityProto.h */,
+			);
+			path = Soap;
+			sourceTree = "<group>";
+		};
+		09309C240F7B934B008A61C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09309C250F7B934B008A61C5 /* CustomTableCell.h */,
+				09309C260F7B934B008A61C5 /* CustomTableCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09309C270F7B934B008A61C5 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				09309C280F7B934B008A61C5 /* RESTService.h */,
+				09309C290F7B934B008A61C5 /* RESTService.m */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		09309C5C0F7B9380008A61C5 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				09309C5E0F7B938D008A61C5 /* SoapArchiverTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		09309C640F7B96B5008A61C5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				09309C610F7B944F008A61C5 /* TestObject.h */,
+				09309C620F7B944F008A61C5 /* TestObject.m */,
+				09309D470F7BBD60008A61C5 /* TestHeader.h */,
+				09309D480F7BBD60008A61C5 /* TestHeader.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09309B990F7B924A008A61C5 /* SoapTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				09309C5C0F7B9380008A61C5 /* Tests */,
+				09309C640F7B96B5008A61C5 /* Utility */,
+				09309BA70F7B9284008A61C5 /* TestUnit */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				09309BBD0F7B9304008A61C5 /* Other Sources */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				09309B9B0F7B924A008A61C5 /* SoapTest-Info.plist */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09309B980F7B924A008A61C5 /* SoapTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09309B9E0F7B924B008A61C5 /* Build configuration list for PBXNativeTarget "SoapTest" */;
+			buildPhases = (
+				09309B950F7B924A008A61C5 /* Resources */,
+				09309B960F7B924A008A61C5 /* Sources */,
+				09309B970F7B924A008A61C5 /* Frameworks */,
+				09309BA00F7B9250008A61C5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoapTest;
+			productName = SoapTest;
+			productReference = 09309B990F7B924A008A61C5 /* SoapTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SoapTest" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09309B980F7B924A008A61C5 /* SoapTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09309B950F7B924A008A61C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09309BA00F7B9250008A61C5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/ilya/Projects/google-toolbox-for-mac-1-5-1/UnitTesting/RunIPhoneUnitTest.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09309B960F7B924A008A61C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09309BAD0F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				09309BAE0F7B92A3008A61C5 /* GTMIPhoneUnitTestMain.m in Sources */,
+				09309BAF0F7B92A3008A61C5 /* GTMSenTestCase.m in Sources */,
+				09309C2C0F7B934B008A61C5 /* AsyncObject.m in Sources */,
+				09309C2D0F7B934B008A61C5 /* UIBlockingAsyncObject.m in Sources */,
+				09309C330F7B934B008A61C5 /* CGGeometry+Utils.m in Sources */,
+				09309C340F7B934B008A61C5 /* CollectionWindow.m in Sources */,
+				09309C390F7B934B008A61C5 /* AgreementCell.m in Sources */,
+				09309C3A0F7B934B008A61C5 /* AgreementController.m in Sources */,
+				09309C3B0F7B934B008A61C5 /* DateTimeCell.m in Sources */,
+				09309C3C0F7B934B008A61C5 /* FormCell.m in Sources */,
+				09309C3D0F7B934B008A61C5 /* FormController.m in Sources */,
+				09309C3E0F7B934B008A61C5 /* FormFieldDescriptor.m in Sources */,
+				09309C3F0F7B934B008A61C5 /* FormTableController.m in Sources */,
+				09309C400F7B934B008A61C5 /* ForwardingLabel.m in Sources */,
+				09309C410F7B934B008A61C5 /* SelectionController.m in Sources */,
+				09309C420F7B934B008A61C5 /* StaticFormCell.m in Sources */,
+				09309C430F7B934B008A61C5 /* SwitchCell.m in Sources */,
+				09309C440F7B934B008A61C5 /* TextEditController.m in Sources */,
+				09309C450F7B934B008A61C5 /* TextFieldCell.m in Sources */,
+				09309C460F7B934B008A61C5 /* TitledCell.m in Sources */,
+				09309C470F7B934B008A61C5 /* POXMapping.m in Sources */,
+				09309C480F7B934B008A61C5 /* POXMappingUtil.m in Sources */,
+				09309C490F7B934B008A61C5 /* SelfDescribing.m in Sources */,
+				09309C4A0F7B934B008A61C5 /* NSArray+Graphics.m in Sources */,
+				09309C4B0F7B934B008A61C5 /* NSArray+Utils.m in Sources */,
+				09309C4C0F7B934B008A61C5 /* NSBundle+Utils.m in Sources */,
+				09309C4D0F7B934B008A61C5 /* NSData+Utils.m in Sources */,
+				09309C4E0F7B934B008A61C5 /* NSDate+Utils.m in Sources */,
+				09309C4F0F7B934B008A61C5 /* NSError+Utils.m in Sources */,
+				09309C500F7B934B008A61C5 /* NSMutableArray+Utils.m in Sources */,
+				09309C510F7B934B008A61C5 /* NSObject+Utils.m in Sources */,
+				09309C520F7B934B008A61C5 /* NSString+Utils.m in Sources */,
+				09309C530F7B934B008A61C5 /* NSUserDefaults+Utils.m in Sources */,
+				09309C550F7B934B008A61C5 /* SoapArchiver.m in Sources */,
+				09309C560F7B934B008A61C5 /* UIApplication+Utils.m in Sources */,
+				09309C570F7B934B008A61C5 /* UIView+Utils.m in Sources */,
+				09309C580F7B934B008A61C5 /* UIWebView+Utils.m in Sources */,
+				09309C590F7B934B008A61C5 /* CustomTableCell.m in Sources */,
+				09309C5A0F7B934B008A61C5 /* RESTService.m in Sources */,
+				09309C5B0F7B934B008A61C5 /* XMLWriter.m in Sources */,
+				09309C5F0F7B938D008A61C5 /* SoapArchiverTest.m in Sources */,
+				09309C630F7B944F008A61C5 /* TestObject.m in Sources */,
+				09309D490F7BBD60008A61C5 /* TestHeader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		09309B9C0F7B924B008A61C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "SoapTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SoapTest;
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Debug;
+		};
+		09309B9D0F7B924B008A61C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "SoapTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SoapTest;
+				SDKROOT = iphoneos2.2.1;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09309B9E0F7B924B008A61C5 /* Build configuration list for PBXNativeTarget "SoapTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09309B9C0F7B924B008A61C5 /* Debug */,
+				09309B9D0F7B924B008A61C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SoapTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
