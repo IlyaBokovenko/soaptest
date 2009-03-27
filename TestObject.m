@@ -5,7 +5,6 @@
 
 @implementation TestObject
 
-@dynamic soapNamespace;
 @synthesize intValue;
 @synthesize doubleValue;
 @synthesize stringValue;
@@ -47,6 +46,10 @@
 
 
 #pragma mark SoapEntityProto
+
+-(NSString*) soapName{
+	return @"TestObject";
+}
 
 -(NSString*)soapNamespace{
 	return @"http://test.com";

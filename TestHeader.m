@@ -3,7 +3,6 @@
 
 @implementation TestHeader
 
-@dynamic soapNamespace;
 @synthesize someData;
 
 -(void)dealloc{
@@ -12,6 +11,10 @@
 }
 
 #pragma mark SoapEntityProto
+
+-(NSString*) soapName{
+	return @"TestHeader";
+}
 
 -(NSString*) soapNamespace{
 	return @"http://header.com";
