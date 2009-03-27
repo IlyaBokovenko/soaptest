@@ -17,6 +17,14 @@
 	return @"http://header.com";
 }
 
+-(Class)typeForKey: (NSString*)key{
+	if([key isEqual:@"someData"]){
+		return [NSString class];
+	}
+	
+	return nil;
+}
+
 #pragma mark NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder{

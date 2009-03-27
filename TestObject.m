@@ -52,14 +52,24 @@
 	return @"http://test.com";
 }
 
+-(Class) typeForKey: (NSString*)key{
+	if([key isEqual: @"stringValue"]){
+		return [NSString class];
+	}else if([key isEqual: @"dateValue"]){
+		return [NSDate class];
+	}
+			 
+	 return nil;
+}
+
 #pragma mark NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
 	SoapUnarchiver* aSoapDecoder = (SoapUnarchiver*)aDecoder;
 	intValue = [aSoapDecoder decodeIntForKey:@"intValue"];
 	doubleValue = [aSoapDecoder decodeDoubleForKey:@"doubleValue"];
-	stringValue = [aSoapDecoder decodeStringForKey:@"stringValue"];
-	dateValue = [aSoapDecoder decodeDateForKey:@"dateValue"];
+	stringValue = [aSoapDecoder decodeObjectForKey:@"stringValue"];
+	dateValue = [aSoapDecoder decodeObjectForKey:@"dateValue"];
 	
 	return self;
 }
@@ -68,10 +78,8 @@
 	SoapArchiver* aSoapCoder = (SoapArchiver*)aCoder;
 	[aSoapCoder encodeInt:intValue forKey: @"intValue"];	
 	[aSoapCoder encodeDouble: doubleValue forKey: @"doubleValue"];
-	[aSoapCoder encodeString: stringValue forKey: @"stringValue"];
-	[aSoapCoder encodeDate: dateValue forKey: @"dateValue"];	
+	[aSoapCoder encodeObject: stringValue forKey: @"stringValue"];
+	[aSoapCoder encodeObject: dateValue forKey: @"dateValue"];	
 }
-
-
 
 @end
