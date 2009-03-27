@@ -4,7 +4,7 @@
 #import "TestObject.h"
 #import "TestHeader.h"
 
-@interface SoapArchiverTest : SenTestCase {
+@interface SoapArchiverTest : GTMTestCase {
  	
 }
 @end
@@ -30,7 +30,10 @@
 	obj.intValue = 10;
 	obj.doubleValue = 10.0;
 	obj.stringValue = @"test";
-	obj.dateValue = [NSDate dateWithString:@"1999-10-20 00:00:00 +000"];
+	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc]
+									initWithDateFormat:@"%1d/%1m/%Y" allowNaturalLanguage:NO]autorelease];
+
+	obj.dateValue = [dateFormatter dateFromString:@"20/10/1999"];
 	
 	[archiver encodeObject:obj forKey: @"TestObject"];
 	NSString* result = archiver.message;
@@ -72,23 +75,26 @@
 	
 	TestHeader* header = [[TestHeader new] autorelease];
 	header.someData = @"test data";
-	STAssertEqualStrings(header.soapNamespace, @"http://header.com", @"ensuring header has namespace");	
+	STAssertEqualStrings(header.soapNamespace, @"http://header.com", @"ensuring header has expected namespace");	
 	
 	TestObject* obj1 = [TestObject testObject];	
-	STAssertEqualStrings(obj1.soapNamespace, @"http://test.com", @"ensuring test object has namespace");	
+	STAssertEqualStrings(obj1.soapNamespace, @"http://test.com", @"ensuring test object has expected namespace");	
+	
+	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc]
+									   initWithDateFormat:@"%1d/%1m/%Y" allowNaturalLanguage:NO]autorelease];
 	
 	obj1.intValue = 10;
 	obj1.doubleValue = 10.0;
-	obj1.stringValue = @"test1";
-	obj1.dateValue = [NSDate dateWithString:@"1999-10-20 00:00:00 +000"];
+	obj1.stringValue = @"test1";	
+	obj1.dateValue = [dateFormatter dateFromString:@"20/10/1999"];
 	
 	TestObject* obj2 = [TestObject testObject];	
-	STAssertEqualStrings(obj2.soapNamespace, @"http://test.com", @"ensuring test object has namespace");	
+	STAssertEqualStrings(obj2.soapNamespace, @"http://test.com", @"ensuring test object has expected namespace");	
 	
 	obj2.intValue = 20;
 	obj2.doubleValue = 20.0;
 	obj2.stringValue = @"test2";
-	obj2.dateValue = [NSDate dateWithString:@"2000-10-20 00:00:00 +000"];
+	obj2.dateValue = [dateFormatter dateFromString:@"20/10/2000"];
 	
 	[archiver encodeHeader:header];
 	[archiver encodeObject:obj1 forKey: @"TestObject"];

@@ -16,4 +16,7 @@
 
 +(TestObject*) testObject;
 
+-(BOOL) isEqual: (TestObject*)other;
+-(NSUInteger) hash;
+
 @end

@@ -1,4 +1,6 @@
 #import "TestObject.h"
+#import "SoapUnarchiver.h"
+#import "SoapArchiver.h"
 
 
 @implementation TestObject
@@ -20,6 +22,30 @@
 	[super dealloc];
 }
 
+-(BOOL) isEqual: (TestObject*)other{
+	if(self == other)
+		return YES;
+	
+	if(intValue != other.intValue)
+		return NO;
+	
+	if(![[NSNumber numberWithDouble:doubleValue] isEqualToNumber: [NSNumber numberWithDouble: other.doubleValue]])
+		return NO;
+	
+	if(![stringValue isEqual: other.stringValue])
+		return NO;
+	
+	if(![dateValue isEqual:other.dateValue])
+		return NO;	
+	
+	return YES;
+}
+
+-(NSUInteger) hash{
+	return [NSNumber numberWithInt: intValue].hash ^ [NSNumber numberWithDouble: doubleValue].hash ^ stringValue.hash ^ dateValue.hash;
+}
+
+
 #pragma mark SoapEntityProto
 
 -(NSString*)soapNamespace{
@@ -29,19 +55,21 @@
 #pragma mark NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
-	intValue = [aDecoder decodeIntForKey:@"intValue"];
-	doubleValue = [aDecoder decodeDoubleForKey:@"doubleValue"];
-	stringValue = [aDecoder decodeObjectForKey:@"stringValue"];
-	dateValue = [aDecoder decodeObjectForKey:@"dateValue"];
+	SoapUnarchiver* aSoapDecoder = (SoapUnarchiver*)aDecoder;
+	intValue = [aSoapDecoder decodeIntForKey:@"intValue"];
+	doubleValue = [aSoapDecoder decodeDoubleForKey:@"doubleValue"];
+	stringValue = [aSoapDecoder decodeStringForKey:@"stringValue"];
+	dateValue = [aSoapDecoder decodeDateForKey:@"dateValue"];
 	
 	return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{
-	[aCoder encodeInt:intValue forKey: @"intValue"];	
-	[aCoder encodeDouble: doubleValue forKey: @"doubleValue"];
-	[aCoder encodeObject: stringValue forKey: @"stringValue"];
-	[aCoder encodeObject: dateValue forKey: @"dateValue"];	
+	SoapArchiver* aSoapCoder = (SoapArchiver*)aCoder;
+	[aSoapCoder encodeInt:intValue forKey: @"intValue"];	
+	[aSoapCoder encodeDouble: doubleValue forKey: @"doubleValue"];
+	[aSoapCoder encodeString: stringValue forKey: @"stringValue"];
+	[aSoapCoder encodeDate: dateValue forKey: @"dateValue"];	
 }
 
 
