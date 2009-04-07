@@ -12,15 +12,15 @@
 
 #pragma mark SoapEntityProto
 
--(NSString*) soapName{
++(NSString*) soapName{
 	return @"TestHeader";
 }
 
--(NSString*) soapNamespace{
++(NSString*) soapNamespace{
 	return @"http://header.com";
 }
 
--(Class)typeForKey: (NSString*)key{
++(Class)typeForKey: (NSString*)key{
 	if([key isEqual:@"someData"]){
 		return [NSString class];
 	}

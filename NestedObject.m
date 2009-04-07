@@ -1,0 +1,33 @@
+#import "NestedObject.h"
+
+
+@implementation NestedObject
+
+@synthesize boolProperty;
+
+#pragma mark NSCoding
+
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+	[aCoder encodeBool:boolProperty forKey:@"boolProperty"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+	if(![super init])
+		return nil;
+	
+	self.boolProperty = [aDecoder decodeBoolForKey:@"boolProperty"];	
+	return self;
+}
+
+
+#pragma mark SoapEntityProto
+
++(NSString*) soapNamespace{
+	return @"http://nested.com";
+}
+
++(NSString*) soapName{
+	return @"NestedObject";
+}
+
+@end

@@ -3,9 +3,10 @@
 #import "SoapArchiver.h"
 #import "TestObject.h"
 #import "TestHeader.h"
+#import "ContainerObject.h"
+#import "NestedObject.h"
 
-@interface SoapArchiverTest : GTMTestCase {
- 	
+@interface SoapArchiverTest : GTMTestCase { 	
 }
 @end
 
@@ -15,7 +16,7 @@
 	SoapArchiver* archiver = [[SoapArchiver new] autorelease];
 	NSString* result = archiver.message;
 	NSString* expected = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
+	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.w3.org/2003/05/soap-envelope\">\n"
 	@"</Envelope>\n";
 	
 	STAssertEqualStrings(result, expected, @"archiving empty message");	
@@ -23,8 +24,8 @@
 
 -(void)testBody{
 	SoapArchiver* archiver = [[SoapArchiver new] autorelease];
-	TestObject* obj1 = [TestObject testObject];	
-	STAssertEqualStrings(obj1.soapNamespace, @"http://test.com", @"ensuring test object has expected namespace");	
+	
+	TestObject* obj1 = [TestObject testObject];		
 	
 	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc]
 									   initWithDateFormat:@"%1d/%1m/%Y" allowNaturalLanguage:NO]autorelease];
@@ -35,30 +36,29 @@
 	obj1.dateValue = [dateFormatter dateFromString:@"20/10/1999"];
 	
 	TestObject* obj2 = [TestObject testObject];	
-	STAssertEqualStrings(obj2.soapNamespace, @"http://test.com", @"ensuring test object has expected namespace");	
 	
 	obj2.intValue = 20;
 	obj2.doubleValue = 20.0;
 	obj2.stringValue = @"test2";
 	obj2.dateValue = [dateFormatter dateFromString:@"20/10/2000"];
 	
-	[archiver encodeBody:obj1];
-	[archiver encodeBody:obj2];
+	[archiver encodeBodyObject:obj1];
+	[archiver encodeBodyObject:obj2];
 	NSString* result = archiver.message;
 	NSString* expected = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
+	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.w3.org/2003/05/soap-envelope\">\n"
 	@"	<Body>\n"
 	@"		<TestObject xmlns=\"http://test.com\">\n"
 	@"			<intValue>10</intValue>\n"
 	@"			<doubleValue>10.000000</doubleValue>\n"
 	@"			<stringValue>test1</stringValue>\n"
-	@"			<dateValue>20/10/1999</dateValue>\n"
+	@"			<dateValue>1999-10-20</dateValue>\n"
 	@"		</TestObject>\n"
 	@"		<TestObject xmlns=\"http://test.com\">\n"
 	@"			<intValue>20</intValue>\n"
 	@"			<doubleValue>20.000000</doubleValue>\n"
 	@"			<stringValue>test2</stringValue>\n"
-	@"			<dateValue>20/10/2000</dateValue>\n"
+	@"			<dateValue>2000-10-20</dateValue>\n"
 	@"		</TestObject>\n"
 	@"	</Body>\n"
 	@"</Envelope>\n";
@@ -68,14 +68,14 @@
 
 -(void)testHeader{
 	SoapArchiver* archiver = [[SoapArchiver new] autorelease];
-	TestHeader* header = [[TestHeader new] autorelease];
-	header.someData = @"test data";
-	STAssertEqualStrings(header.soapNamespace, @"http://header.com", @"ensuring header has namespace");
 	
-	[archiver encodeHeader: header];
+	TestHeader* header = [[TestHeader new] autorelease];
+	header.someData = @"test data";	
+	
+	[archiver encodeHeaderObject: header];
 	NSString* result = archiver.message;
 	NSString* expected = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
+	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.w3.org/2003/05/soap-envelope\">\n"
 	@"	<Header>\n"
 	@"		<TestHeader xmlns=\"http://header.com\">\n"
 	@"			<someData>test data</someData>\n"
@@ -91,10 +91,8 @@
 	
 	TestHeader* header = [[TestHeader new] autorelease];
 	header.someData = @"test data";
-	STAssertEqualStrings(header.soapNamespace, @"http://header.com", @"ensuring header has expected namespace");	
 	
 	TestObject* obj = [TestObject testObject];	
-	STAssertEqualStrings(obj.soapNamespace, @"http://test.com", @"ensuring test object has expected namespace");	
 	
 	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc]
 									   initWithDateFormat:@"%1d/%1m/%Y" allowNaturalLanguage:NO]autorelease];
@@ -104,11 +102,11 @@
 	obj.stringValue = @"test1";	
 	obj.dateValue = [dateFormatter dateFromString:@"20/10/1999"];	
 	
-	[archiver encodeHeader:header];
-	[archiver encodeBody:obj];
+	[archiver encodeHeaderObject:header];
+	[archiver encodeBodyObject:obj];
 	NSString* result = archiver.message;
 	NSString* expected = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
+	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.w3.org/2003/05/soap-envelope\">\n"
 	@"	<Header>\n"
 	@"		<TestHeader xmlns=\"http://header.com\">\n"
 	@"			<someData>test data</someData>\n"
@@ -119,12 +117,40 @@
 	@"			<intValue>10</intValue>\n"
 	@"			<doubleValue>10.000000</doubleValue>\n"
 	@"			<stringValue>test1</stringValue>\n"
-	@"			<dateValue>20/10/1999</dateValue>\n"
+	@"			<dateValue>1999-10-20</dateValue>\n"
 	@"		</TestObject>\n"
 	@"	</Body>\n"
 	@"</Envelope>\n";
 	
 	STAssertEqualStrings(result, expected, @"archiving full message");
+}
+
+-(void)testNestedObjects{
+	SoapArchiver* archiver = [[SoapArchiver new] autorelease];
+	
+	NestedObject* nested = [[NestedObject new]autorelease];
+	nested.boolProperty = YES;
+	ContainerObject* container = [[ContainerObject new]autorelease];
+	container.int1 = 10;
+	container.nested = nested;
+	container.int2 = 20;
+	
+	[archiver encodeBodyObject: container];
+	NSString* result = archiver.message;
+	NSString* expected = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.w3.org/2003/05/soap-envelope\">\n"
+	@"	<Body>\n"
+	@"		<ContainerObject xmlns=\"http://container.com\">\n"
+	@"			<int1>10</int1>\n"
+	@"			<myNested xmlns=\"http://nested.com\">\n"
+	@"				<boolProperty>true</boolProperty>\n"
+	@"			</myNested>\n"
+	@"			<int2>20</int2>\n"
+	@"		</ContainerObject>\n"
+	@"	</Body>\n"
+	@"</Envelope>\n";
+	
+	STAssertEqualStrings(result, expected, @"archiving nested objects");	
 }
 
 @end

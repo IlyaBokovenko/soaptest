@@ -47,15 +47,15 @@
 
 #pragma mark SoapEntityProto
 
--(NSString*) soapName{
++(NSString*) soapName{
 	return @"TestObject";
 }
 
--(NSString*)soapNamespace{
++(NSString*)soapNamespace{
 	return @"http://test.com";
 }
 
--(Class) typeForKey: (NSString*)key{
++(Class) typeForKey: (NSString*)key{
 	if([key isEqual: @"stringValue"]){
 		return [NSString class];
 	}else if([key isEqual: @"dateValue"]){
@@ -68,21 +68,19 @@
 #pragma mark NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
-	SoapUnarchiver* aSoapDecoder = (SoapUnarchiver*)aDecoder;
-	intValue = [aSoapDecoder decodeIntForKey:@"intValue"];
-	doubleValue = [aSoapDecoder decodeDoubleForKey:@"doubleValue"];
-	stringValue = [aSoapDecoder decodeObjectForKey:@"stringValue"];
-	dateValue = [aSoapDecoder decodeObjectForKey:@"dateValue"];
+	self.intValue = [aDecoder decodeIntForKey:@"intValue"];
+	self.doubleValue = [aDecoder decodeDoubleForKey:@"doubleValue"];
+	self.stringValue = [aDecoder decodeObjectForKey:@"stringValue"];
+	self.dateValue = [aDecoder decodeObjectForKey:@"dateValue"];
 	
 	return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{
-	SoapArchiver* aSoapCoder = (SoapArchiver*)aCoder;
-	[aSoapCoder encodeInt:intValue forKey: @"intValue"];	
-	[aSoapCoder encodeDouble: doubleValue forKey: @"doubleValue"];
-	[aSoapCoder encodeObject: stringValue forKey: @"stringValue"];
-	[aSoapCoder encodeObject: dateValue forKey: @"dateValue"];	
+	[aCoder encodeInt:intValue forKey: @"intValue"];	
+	[aCoder encodeDouble: doubleValue forKey: @"doubleValue"];
+	[aCoder encodeObject: stringValue forKey: @"stringValue"];
+	[aCoder encodeObject: dateValue forKey: @"dateValue"];	
 }
 
 @end
