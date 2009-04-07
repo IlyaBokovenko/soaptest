@@ -13,10 +13,10 @@
 		09309BAD0F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BA90F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.m */; };
 		09309BAE0F7B92A3008A61C5 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BAA0F7B92A3008A61C5 /* GTMIPhoneUnitTestMain.m */; };
 		09309BAF0F7B92A3008A61C5 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309BAC0F7B92A3008A61C5 /* GTMSenTestCase.m */; };
-		09309C5F0F7B938D008A61C5 /* SoapArchiverTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C5E0F7B938D008A61C5 /* SoapArchiverTest.m */; };
+		09309C5F0F7B938D008A61C5 /* SoapEnveloperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C5E0F7B938D008A61C5 /* SoapEnveloperTest.m */; };
 		09309C630F7B944F008A61C5 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309C620F7B944F008A61C5 /* TestObject.m */; };
 		09309D490F7BBD60008A61C5 /* TestHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309D480F7BBD60008A61C5 /* TestHeader.m */; };
-		09309E0A0F7CBAD7008A61C5 /* SoapUnarchiverTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309E090F7CBAD7008A61C5 /* SoapUnarchiverTest.m */; };
+		09309E0A0F7CBAD7008A61C5 /* SoapDeenveloperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309E090F7CBAD7008A61C5 /* SoapDeenveloperTest.m */; };
 		09309E450F7CC83E008A61C5 /* TestObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309E440F7CC83E008A61C5 /* TestObjectTest.m */; };
 		09309E980F7CD380008A61C5 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309E8C0F7CD380008A61C5 /* CXMLDocument.m */; };
 		09309E990F7CD380008A61C5 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309E8E0F7CD380008A61C5 /* CXMLDocument_PrivateExtensions.m */; };
@@ -57,8 +57,8 @@
 		09BEFEF00F8B52EA00FD35CD /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEAD0F8B52EA00FD35CD /* NSObject+Utils.m */; };
 		09BEFEF10F8B52EA00FD35CD /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEAF0F8B52EA00FD35CD /* NSString+Utils.m */; };
 		09BEFEF20F8B52EA00FD35CD /* NSUserDefaults+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEB10F8B52EA00FD35CD /* NSUserDefaults+Utils.m */; };
-		09BEFEF40F8B52EA00FD35CD /* SoapArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEB60F8B52EA00FD35CD /* SoapArchiver.m */; };
-		09BEFEF50F8B52EA00FD35CD /* SoapUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEB90F8B52EA00FD35CD /* SoapUnarchiver.m */; };
+		09BEFEF40F8B52EA00FD35CD /* SoapEnveloper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEB60F8B52EA00FD35CD /* SoapEnveloper.m */; };
+		09BEFEF50F8B52EA00FD35CD /* SoapDeenveloper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEB90F8B52EA00FD35CD /* SoapDeenveloper.m */; };
 		09BEFEF60F8B52EA00FD35CD /* UIAlertView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEBB0F8B52EA00FD35CD /* UIAlertView+Utils.m */; };
 		09BEFEF70F8B52EA00FD35CD /* UIApplication+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEBD0F8B52EA00FD35CD /* UIApplication+Utils.m */; };
 		09BEFEF80F8B52EA00FD35CD /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFEBF0F8B52EA00FD35CD /* UIView+Utils.m */; };
@@ -79,12 +79,12 @@
 		09309BAB0F7B92A3008A61C5 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "../google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.h"; sourceTree = SOURCE_ROOT; };
 		09309BAC0F7B92A3008A61C5 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "../google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.m"; sourceTree = SOURCE_ROOT; };
 		09309BB00F7B92D2008A61C5 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "../google-toolbox-for-mac-1-5-1/GTMDefines.h"; sourceTree = SOURCE_ROOT; };
-		09309C5E0F7B938D008A61C5 /* SoapArchiverTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapArchiverTest.m; sourceTree = "<group>"; };
+		09309C5E0F7B938D008A61C5 /* SoapEnveloperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapEnveloperTest.m; sourceTree = "<group>"; };
 		09309C610F7B944F008A61C5 /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		09309C620F7B944F008A61C5 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
 		09309D470F7BBD60008A61C5 /* TestHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHeader.h; sourceTree = "<group>"; };
 		09309D480F7BBD60008A61C5 /* TestHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHeader.m; sourceTree = "<group>"; };
-		09309E090F7CBAD7008A61C5 /* SoapUnarchiverTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapUnarchiverTest.m; sourceTree = "<group>"; };
+		09309E090F7CBAD7008A61C5 /* SoapDeenveloperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapDeenveloperTest.m; sourceTree = "<group>"; };
 		09309E440F7CC83E008A61C5 /* TestObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObjectTest.m; sourceTree = "<group>"; };
 		09309E8B0F7CD380008A61C5 /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
 		09309E8C0F7CD380008A61C5 /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
@@ -169,11 +169,11 @@
 		09BEFEAF0F8B52EA00FD35CD /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
 		09BEFEB00F8B52EA00FD35CD /* NSUserDefaults+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Utils.h"; sourceTree = "<group>"; };
 		09BEFEB10F8B52EA00FD35CD /* NSUserDefaults+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Utils.m"; sourceTree = "<group>"; };
-		09BEFEB50F8B52EA00FD35CD /* SoapArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapArchiver.h; sourceTree = "<group>"; };
-		09BEFEB60F8B52EA00FD35CD /* SoapArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapArchiver.m; sourceTree = "<group>"; };
+		09BEFEB50F8B52EA00FD35CD /* SoapEnveloper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapEnveloper.h; sourceTree = "<group>"; };
+		09BEFEB60F8B52EA00FD35CD /* SoapEnveloper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapEnveloper.m; sourceTree = "<group>"; };
 		09BEFEB70F8B52EA00FD35CD /* SoapEntityProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapEntityProto.h; sourceTree = "<group>"; };
-		09BEFEB80F8B52EA00FD35CD /* SoapUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapUnarchiver.h; sourceTree = "<group>"; };
-		09BEFEB90F8B52EA00FD35CD /* SoapUnarchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapUnarchiver.m; sourceTree = "<group>"; };
+		09BEFEB80F8B52EA00FD35CD /* SoapDeenveloper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDeenveloper.h; sourceTree = "<group>"; };
+		09BEFEB90F8B52EA00FD35CD /* SoapDeenveloper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapDeenveloper.m; sourceTree = "<group>"; };
 		09BEFEBA0F8B52EA00FD35CD /* UIAlertView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Utils.h"; sourceTree = "<group>"; };
 		09BEFEBB0F8B52EA00FD35CD /* UIAlertView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Utils.m"; sourceTree = "<group>"; };
 		09BEFEBC0F8B52EA00FD35CD /* UIApplication+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Utils.h"; sourceTree = "<group>"; };
@@ -236,8 +236,8 @@
 		09309C5C0F7B9380008A61C5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				09309C5E0F7B938D008A61C5 /* SoapArchiverTest.m */,
-				09309E090F7CBAD7008A61C5 /* SoapUnarchiverTest.m */,
+				09309C5E0F7B938D008A61C5 /* SoapEnveloperTest.m */,
+				09309E090F7CBAD7008A61C5 /* SoapDeenveloperTest.m */,
 				09309E440F7CC83E008A61C5 /* TestObjectTest.m */,
 			);
 			name = Tests;
@@ -393,11 +393,11 @@
 		09BEFEB40F8B52EA00FD35CD /* Soap */ = {
 			isa = PBXGroup;
 			children = (
-				09BEFEB50F8B52EA00FD35CD /* SoapArchiver.h */,
-				09BEFEB60F8B52EA00FD35CD /* SoapArchiver.m */,
 				09BEFEB70F8B52EA00FD35CD /* SoapEntityProto.h */,
-				09BEFEB80F8B52EA00FD35CD /* SoapUnarchiver.h */,
-				09BEFEB90F8B52EA00FD35CD /* SoapUnarchiver.m */,
+				09BEFEB50F8B52EA00FD35CD /* SoapEnveloper.h */,
+				09BEFEB60F8B52EA00FD35CD /* SoapEnveloper.m */,
+				09BEFEB80F8B52EA00FD35CD /* SoapDeenveloper.h */,
+				09BEFEB90F8B52EA00FD35CD /* SoapDeenveloper.m */,
 				09BE00880F8BB43E00FD35CD /* CustomSoapEntity.h */,
 				09BE00890F8BB43E00FD35CD /* CustomSoapEntity.m */,
 			);
@@ -526,10 +526,10 @@
 				09309BAD0F7B92A3008A61C5 /* GTMIPhoneUnitTestDelegate.m in Sources */,
 				09309BAE0F7B92A3008A61C5 /* GTMIPhoneUnitTestMain.m in Sources */,
 				09309BAF0F7B92A3008A61C5 /* GTMSenTestCase.m in Sources */,
-				09309C5F0F7B938D008A61C5 /* SoapArchiverTest.m in Sources */,
+				09309C5F0F7B938D008A61C5 /* SoapEnveloperTest.m in Sources */,
 				09309C630F7B944F008A61C5 /* TestObject.m in Sources */,
 				09309D490F7BBD60008A61C5 /* TestHeader.m in Sources */,
-				09309E0A0F7CBAD7008A61C5 /* SoapUnarchiverTest.m in Sources */,
+				09309E0A0F7CBAD7008A61C5 /* SoapDeenveloperTest.m in Sources */,
 				09309E450F7CC83E008A61C5 /* TestObjectTest.m in Sources */,
 				09309E980F7CD380008A61C5 /* CXMLDocument.m in Sources */,
 				09309E990F7CD380008A61C5 /* CXMLDocument_PrivateExtensions.m in Sources */,
@@ -569,8 +569,8 @@
 				09BEFEF00F8B52EA00FD35CD /* NSObject+Utils.m in Sources */,
 				09BEFEF10F8B52EA00FD35CD /* NSString+Utils.m in Sources */,
 				09BEFEF20F8B52EA00FD35CD /* NSUserDefaults+Utils.m in Sources */,
-				09BEFEF40F8B52EA00FD35CD /* SoapArchiver.m in Sources */,
-				09BEFEF50F8B52EA00FD35CD /* SoapUnarchiver.m in Sources */,
+				09BEFEF40F8B52EA00FD35CD /* SoapEnveloper.m in Sources */,
+				09BEFEF50F8B52EA00FD35CD /* SoapDeenveloper.m in Sources */,
 				09BEFEF60F8B52EA00FD35CD /* UIAlertView+Utils.m in Sources */,
 				09BEFEF70F8B52EA00FD35CD /* UIApplication+Utils.m in Sources */,
 				09BEFEF80F8B52EA00FD35CD /* UIView+Utils.m in Sources */,
