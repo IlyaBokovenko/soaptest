@@ -5,6 +5,7 @@
 #import "TestHeader.h"
 #import "ContainerObject.h"
 #import "NestedObject.h"
+#import "SoapCustomEntity.h"
 
 @interface SoapEnveloperTest : GTMTestCase { 	
 }
@@ -151,6 +152,48 @@
 	@"</Envelope>\n";
 	
 	STAssertEqualStrings(result, expected, @"archiving nested objects");	
+}
+
+
+-(void)testCustomSoapObject{
+	SoapEnveloper* enveloper = [[SoapEnveloper new] autorelease];
+	
+	NSDateFormatter *dateFormatter = [[NSDateFormatter new] autorelease];
+	[dateFormatter setDateFormat: @"dd-MM-yyyy"];
+	
+	SoapCustomEntity* obj = [[SoapCustomEntity new]autorelease];		
+	obj.name = @"Custom";
+	obj.namespace = @"http://custom.com";
+	[obj setBool: YES forKey: @"boolValue"];
+	[obj setInt: 10 forKey: @"intValue"];	
+	[obj setDouble: 20.0 forKey: @"doubleValue"];
+	[obj setString: @"string" forKey: @"stringValue"];
+	NestedObject* nested = [[NestedObject new]autorelease];
+	nested.boolProperty = YES;
+	[obj setObject: nested forKey: @"objectValue"];		
+	[obj setDate: [dateFormatter dateFromString: @"20-10-2009"] forKey: @"dateValue"];
+	
+	[enveloper encodeBodyObject:obj];
+
+	NSString* result = enveloper.message;
+	NSString* expected = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.w3.org/2003/05/soap-envelope\">\n"
+	@"	<Body>\n"
+	@"		<Custom xmlns=\"http://custom.com\">\n"
+	@"			<boolValue>true</boolValue>\n"
+	@"			<intValue>10</intValue>\n"
+	@"			<doubleValue>20.000000</doubleValue>\n"
+	@"			<stringValue>string</stringValue>\n"
+	@"			<objectValue xmlns=\"http://nested.com\">\n"
+	@"				<boolProperty>true</boolProperty>\n"
+	@"			</objectValue>\n"	
+	@"			<dateValue>2009-10-20</dateValue>\n"
+	@"		</Custom>\n"
+	@"	</Body>\n"
+	@"</Envelope>\n";
+	
+	STAssertEqualStrings(result, expected, @"archiving custom object");
+	
 }
 
 @end
