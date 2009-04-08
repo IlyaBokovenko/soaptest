@@ -24,6 +24,7 @@
 		09309E9B0F7CD380008A61C5 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309E920F7CD380008A61C5 /* CXMLNode.m */; };
 		09309E9C0F7CD380008A61C5 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309E940F7CD380008A61C5 /* CXMLNode_PrivateExtensions.m */; };
 		09309E9D0F7CD380008A61C5 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09309E960F7CD380008A61C5 /* CXMLNode_XPathExtensions.m */; };
+		09449C6E0F8CE6CD009FC5B3 /* SoapCustomEntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09449C6D0F8CE6CD009FC5B3 /* SoapCustomEntityTest.m */; };
 		09BE008A0F8BB43E00FD35CD /* SoapCustomEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BE00890F8BB43E00FD35CD /* SoapCustomEntity.m */; };
 		09BEFECA0F8B52EA00FD35CD /* AsyncObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFE590F8B52E900FD35CD /* AsyncObject.m */; };
 		09BEFECB0F8B52EA00FD35CD /* UIBlockingAsyncObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEFE5B0F8B52E900FD35CD /* UIBlockingAsyncObject.m */; };
@@ -99,6 +100,7 @@
 		09309E950F7CD380008A61C5 /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
 		09309E960F7CD380008A61C5 /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
 		09309E970F7CD380008A61C5 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		09449C6D0F8CE6CD009FC5B3 /* SoapCustomEntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapCustomEntityTest.m; sourceTree = "<group>"; };
 		09BE00880F8BB43E00FD35CD /* SoapCustomEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoapCustomEntity.h; path = "../ecma-utils/Classes/Soap/SoapCustomEntity.h"; sourceTree = SOURCE_ROOT; };
 		09BE00890F8BB43E00FD35CD /* SoapCustomEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoapCustomEntity.m; path = "../ecma-utils/Classes/Soap/SoapCustomEntity.m"; sourceTree = SOURCE_ROOT; };
 		09BEFE580F8B52E900FD35CD /* AsyncObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncObject.h; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				09309C5E0F7B938D008A61C5 /* SoapEnveloperTest.m */,
 				09309E090F7CBAD7008A61C5 /* SoapDeenveloperTest.m */,
 				09309E440F7CC83E008A61C5 /* TestObjectTest.m */,
+				09449C6D0F8CE6CD009FC5B3 /* SoapCustomEntityTest.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -394,12 +397,12 @@
 			isa = PBXGroup;
 			children = (
 				09BEFEB70F8B52EA00FD35CD /* SoapEntityProto.h */,
+				09BE00880F8BB43E00FD35CD /* SoapCustomEntity.h */,
+				09BE00890F8BB43E00FD35CD /* SoapCustomEntity.m */,
 				09BEFEB50F8B52EA00FD35CD /* SoapEnveloper.h */,
 				09BEFEB60F8B52EA00FD35CD /* SoapEnveloper.m */,
 				09BEFEB80F8B52EA00FD35CD /* SoapDeenveloper.h */,
 				09BEFEB90F8B52EA00FD35CD /* SoapDeenveloper.m */,
-				09BE00880F8BB43E00FD35CD /* SoapCustomEntity.h */,
-				09BE00890F8BB43E00FD35CD /* SoapCustomEntity.m */,
 			);
 			path = Soap;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				09BEFF000F8B555900FD35CD /* ContainerObject.m in Sources */,
 				09BEFF030F8B558200FD35CD /* NestedObject.m in Sources */,
 				09BE008A0F8BB43E00FD35CD /* SoapCustomEntity.m in Sources */,
+				09449C6E0F8CE6CD009FC5B3 /* SoapCustomEntityTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

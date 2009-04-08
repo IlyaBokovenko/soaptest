@@ -5,6 +5,12 @@
 
 @synthesize boolProperty;
 
++(NestedObject*) nestedWithProp: (BOOL)val{
+	NestedObject* inst = [[NestedObject new]autorelease];
+	inst.boolProperty = val;
+	return inst;
+}
+
 #pragma mark NSCoding
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{

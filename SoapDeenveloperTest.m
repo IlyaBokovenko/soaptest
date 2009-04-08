@@ -66,49 +66,4 @@
 	STAssertEquals(decoded.nested.boolProperty, YES, nil);
 }
 
--(void)testCustomSoapObject{
-	NSString* xml = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-	@"<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.w3.org/2003/05/soap-envelope\">\n"
-	@"	<Body>\n"
-	@"		<Custom xmlns=\"http://custom.com\">\n"
-	@"			<boolValue>true</boolValue>\n"
-	@"			<intValue>10</intValue>\n"
-	@"			<doubleValue>20.000000</doubleValue>\n"
-	@"			<stringValue>string</stringValue>\n"
-	@"			<objectValue xmlns=\"http://nested.com\">\n"
-	@"				<boolProperty>true</boolProperty>\n"
-	@"			</objectValue>\n"	
-	@"			<dateValue>2009-10-20</dateValue>\n"
-	@"		</Custom>\n"
-	@"	</Body>\n"
-	@"</Envelope>\n";	
-	
-	SoapDeenveloper* deenveloper = [SoapDeenveloper soapDeenveloperWithXmlString:xml];
-	
-	SoapCustomEntityType* type = [[SoapCustomEntityType new]autorelease];		
-	type.name = @"Custom";
-	type.namespace = @"http://custom.com";
-	[type addBoolForKey: @"boolValue"];
-	[type addIntForKey: @"intValue"];	
-	[type addDoubleForKey: @"doubleValue"];
-	[type addStringForKey: @"stringValue"];
-	[type addObjectOfType:[NestedObject class] forKey:@"objectValue"];
-	[type addDateForKey: @"dateValue"];
-	
-	SoapCustomEntity* obj = [deenveloper decodeBodyObjectOfType:type];
-	
-	STAssertTrue([obj isKindOfClass:[SoapCustomEntity class]], nil);
-	STAssertEquals([[obj objectForKey:@"boolValue"] boolValue], YES, nil);
-	STAssertEquals([[obj objectForKey:@"intValue"] intValue], 10, nil);
-	STAssertEqualsWithAccuracy([[obj objectForKey:@"doubleValue"] doubleValue], 20.0, 0.00001, nil);
-	STAssertEqualStrings([obj objectForKey:@"stringValue"], @"string", nil);
-	
-	NSDateFormatter *dateFormatter = [[NSDateFormatter new] autorelease];
-	[dateFormatter setDateFormat: @"dd-MM-yyyy"];	
-	STAssertEqualObjects([obj objectForKey:@"dateValue"], [dateFormatter dateFromString:@"20-10-2009"], nil);
-	NestedObject* nested = [obj objectForKey:@"objectValue"];
-	STAssertTrue([nested isKindOfClass:[NestedObject class]], nil);
-	STAssertEquals(nested.boolProperty, YES, nil);
-}
-
 @end
